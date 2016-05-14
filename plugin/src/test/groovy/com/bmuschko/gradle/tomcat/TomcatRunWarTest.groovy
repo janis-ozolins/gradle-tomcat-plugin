@@ -160,7 +160,7 @@ class TomcatRunWarTest {
 
     private File createWebAppDir() {
         File webAppDir = new File(testDir, "webApp")
-        boolean success = webAppDir.mkdirs()
+        boolean success = webAppDir.exists() || webAppDir.mkdirs()
 
         if(!success) {
             fail "Unable to create web app directory"
