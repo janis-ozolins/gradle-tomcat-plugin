@@ -1,0 +1,14 @@
+language: java
+jdk:
+  - oraclejdk7
+env:
+  global:
+  - TERM=dumb
+  - GRADLE_OPTS="-Xmx512m -Xms256m -XX:MaxPermSize=256m"
+branches:
+  only:
+    - master
+install:
+  - true
+script:
+  - ./gradlew clean test
